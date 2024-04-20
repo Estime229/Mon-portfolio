@@ -15,7 +15,7 @@ export const CallToActionView = () => {
                     </Typography>
 
                     <Typography variant="h5" weight="meduim" theme="black" component="h2">
-                        Don't be shy! Hit me up! 👇
+                        Don&apos;t be shy! Hit me up! 👇
                     </Typography>
 
                     <div className="flex space-x-40 reative py-10   ">

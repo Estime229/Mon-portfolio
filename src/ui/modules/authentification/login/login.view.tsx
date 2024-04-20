@@ -41,11 +41,11 @@ export const LoginView = ({ form }: Props) => {
 
                         <div className="flex items-center gap-2">
                             <Typography variant="caption4" component="span" theme="gray">
-                                Tu n'as pas de compte ?
+                                Tu n&apos;as pas de compte ?
                             </Typography>
 
                             <Typography variant="caption4" component="span" theme="primary">
-                                <Link href="/connexion/inscription">S'inscrire</Link>
+                                <Link href="/connexion/inscription">S&apos;inscrire</Link>
                             </Typography>
                         </div>
 

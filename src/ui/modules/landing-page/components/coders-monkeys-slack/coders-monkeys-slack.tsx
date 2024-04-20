@@ -21,10 +21,10 @@ export const CodersMonkeysSlackView = () => {
                 </Typography>
 
                 <Typography variant="body-lg" component="p" theme="gray" className="max-w-lg">
-                    Rejoins-nous et obtiens de l'aide, des conseils et pourquoi pas de nouveaux potes  {" "}
+                    Rejoins-nous et obtiens de l&apos;aide, des conseils et pourquoi pas de nouveaux potes  {" "}
                 </Typography>
                 <Button baseUrl="/#" linkType={LinkTypes.EXTERNAL}>
-                    Rejoindre le groupe d'aide
+                    Rejoindre le groupe d&apos;aide
                 </Button>
             </div>
 

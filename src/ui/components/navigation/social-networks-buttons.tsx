@@ -4,27 +4,26 @@ import { v4 as uuidv4 } from 'uuid';
 import clsx from "clsx";
 import { RiFacebookBoxFill } from "react-icons/ri";
 
-
 interface Props {
-theme?: "gray"| "accent"|"secondary";
-    ClassName: string
+    theme?: "gray" | "accent" | "secondary";
+    ClassName: string;
 }
 
-export const SocialNetworksButtons = ({ClassName, theme = "accent"}: Props) => {
-    
+export const SocialNetworksButtons = ({ ClassName, theme = "accent" }: Props) => {
+
     const icoList = footerSocialNetworksLinks.map((socialNetwork) => (
         <Button
             key={uuidv4()}
-            variant="ico" iconTheme={theme} icon={{
-                 icon: socialNetwork.icon ? socialNetwork.icon: RiFacebookBoxFill
-                
-                }}
-              baseUrl={socialNetwork.baseUrl}
-             linkType={socialNetwork.type}
+            variant="ico"
+            iconTheme={theme}
+            icon={{
+                icon: socialNetwork.icon ? socialNetwork.icon : RiFacebookBoxFill
+            }}
+            baseUrl={socialNetwork.baseUrl}
+           
         />
     ))
 
+    return <div className={clsx(ClassName, "flex items-center gap-2.5")}>{icoList}</div>;
 
-    return  <div className={clsx(ClassName, "flex items-center gap-2.5")}>{icoList}</div>;
-    
-} 
+}

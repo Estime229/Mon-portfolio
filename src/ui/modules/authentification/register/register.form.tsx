@@ -51,7 +51,7 @@ export const RegisterForm = ({ form }: Props) => {
       />
 
 
-      <Button isLoading={isLoading} type="submit" fullwith>S'inscrire</Button>
+      <Button isLoading={isLoading} type="submit" fullwith>S&apos;inscrire</Button>
 
     </form>
 

@@ -14,7 +14,7 @@ export const HeroTopView = () => {
                     Full-Stack React Developper👋
                 </Typography>
                 <Typography variant="body-lg" component="p" theme="gray" className="mx-w-xl">
-                    Hi, I'm Frédy Gliti. A passionate Front-end React
+                    Hi, I&apos;m Frédy Gliti. A passionate Front-end React
                     Developper based in Africa, Bénin 🎈
                 </Typography>
                 <div className="space-x-3 pt-2.5 flex ">

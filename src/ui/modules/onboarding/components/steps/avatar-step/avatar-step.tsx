@@ -120,14 +120,8 @@ const handleImageUpload= ()  => {
                                 Dernière étape
                             </Typography>
                             <Typography variant="body-base" component="p" theme="gray">
-                                Dis nous tout sur toi . Remplis notre formulaire de
-                                présentation pour qu'on puisse mieux te connaitre   .On veut
-                                savoir qui tu es , ce que tu fais et comment t'as atteint ici.
-                                Plus on en saura sur toi, miaux on pourra personnaliser ton
-                                expérience sur notre plateforme
-
+                            Dis-nous tout sur toi. Remplis notre formulaire de présentation pour quon puisse mieux te connaître. On veut savoir qui tu es, ce que tu fais et comment tu as atteint ici. Plus on en saura sur toi, mieux on pourra personnaliser ton expérience sur notre plateforme.
                             </Typography>
-
                         </div>
                     </div>
                     <div className="flex items-center h-full col-span-6">

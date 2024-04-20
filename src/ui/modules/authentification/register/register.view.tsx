@@ -54,12 +54,12 @@ export const RegisterView = ({ form }: Props) => {
 
                         <div>
 
-                            En t'inscrivant, tu acceptes les
+                            En t&apos;inscrivant, tu acceptes les
                         </div>
 
                         <div>
                             <Link href="/#" className="text-gray">
-                                Conditions d'utilisations
+                                Conditions d&apos;utilisations
                             </Link>
 
                             {" "} et la {" "}

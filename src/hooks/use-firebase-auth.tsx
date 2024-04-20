@@ -2,22 +2,20 @@ import { auth, db } from "@/config/firebase-config";
 import { UserDocument, UserInterface } from "@/types/user";
 import { User, onAuthStateChanged } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export default function useFirebaseAuth() {
     const [authUser, setAuthUser] = useState<UserInterface | null>(null)
     const [authUserIsLoading, setAuthUserIsLoading] = useState<boolean>(true)
 
-// Reload authUserData Function
-
-const reloadAuthUserData = () => {
-    if(auth.currentUser){
-        auth.currentUser.reload().then(()=>{
-            authStateChanged(auth.currentUser)
-        })
+    // Reload authUserData Function
+    const reloadAuthUserData = () => {
+        if(auth.currentUser){
+            auth.currentUser.reload().then(()=>{
+                authStateChanged(auth.currentUser)
+            })
+        }
     }
-}
-
 
     const formatAuthUser = (user: UserInterface) => ({ 
         uid: user.uid,
@@ -40,12 +38,11 @@ const reloadAuthUserData = () => {
                      ...compactUser
                 }));
                 setAuthUserIsLoading(false)
-
             })
         }
     }
 
-    const authStateChanged = async (authState: UserInterface | User | null) => {
+    const authStateChanged = useCallback(async (authState: UserInterface | User | null) => {
         if (!authState) {
             setAuthUser(null);
             setAuthUserIsLoading(false);
@@ -54,15 +51,12 @@ const reloadAuthUserData = () => {
         setAuthUserIsLoading(true);
         const formattedUser = formatAuthUser(authState);
         await getUserDocument(formattedUser)
-    };
+    }, []);
 
     useEffect(() => {
-        const unsubscribe =
-            onAuthStateChanged(auth, authStateChanged);
-        return () => unsubscribe();
-
-    }, []
-    );
+        const unsubscribe = onAuthStateChanged(auth, authStateChanged);
+        return () => unsubscribe(); // Cleanup function
+    }, [authStateChanged]); // Ajouter authStateChanged comme dépendance
 
     return {
         authUser,

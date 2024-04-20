@@ -15,7 +15,7 @@ export const CurrentCourseCtaView = () => {
                 </Typography>
 
                 <Typography variant="lead" component="h3" className="mb-5" >
-                    Apprends a coder l'app des siges codeurs
+                    Apprends a coder l&apos;app des siges codeurs
                 </Typography>
 
                 <Typography variant="caption3" component="p" theme="gray" className="mb-16" >
